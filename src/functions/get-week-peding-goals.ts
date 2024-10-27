@@ -50,5 +50,5 @@ export async function getWeekPedingGoals() {
       goalCompletionCounts,
       eq(goalCompletionCounts.goalId, goalsCreatedUpToWeek.id)
     )
-  return pendingGoals
+  return { pendingGoals }
 }
