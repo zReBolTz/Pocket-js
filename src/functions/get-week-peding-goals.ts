@@ -2,6 +2,9 @@ import dayjs from 'dayjs'
 import { db } from '../db'
 import { goalCompletions, goals } from '../db/schema'
 import { and, count, eq, gte, lte, sql } from 'drizzle-orm'
+import ptBr from 'dayjs/locale/pt-Br'
+
+dayjs.locale(ptBr)
 
 export async function getWeekPedingGoals() {
   const firstDayOfWeek = dayjs().startOf('week').toDate()
